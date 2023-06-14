@@ -18,5 +18,5 @@ body {
 }
 
 .button{
-  @apply bg-buttonBg font-medium outline outline-1 outline-transparent transition-all rounded-xl hover:bg-buttonHoverBg hover:outline-white/75
+  @apply bg-buttonBg font-medium outline outline-1 outline-transparent transition-all rounded-xl hover:bg-buttonHoverBg hover:outline-white/75 text-white
 }
