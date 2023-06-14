@@ -11,3 +11,12 @@
 body {
   font-family: "Space Grotesk", sans-serif;
 }
+
+.radial-gradient-bg {
+  background: rgb(17,17,17);
+  background: linear-gradient(0deg, rgba(17,17,17,1) 50%, rgb(34, 2, 56) 100%);
+}
+
+.button{
+  @apply bg-buttonBg font-medium outline outline-1 outline-transparent transition-all rounded-xl hover:bg-buttonHoverBg hover:outline-white/75
+}

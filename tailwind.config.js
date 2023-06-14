@@ -5,7 +5,20 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        buttonBg: '#89158d',
+        buttonHoverBg: '#79147c',
+        buttonBorder: ''
+      },
+      width: {
+        container: '1300px'
+      },
+      padding: {
+        containerDesktop: '30px',
+        containerMobile: '20px'
+      }
+    },
   },
   plugins: [],
 }
