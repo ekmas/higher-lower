@@ -1,8 +1,11 @@
 import { useState } from "react";
 import ProfileDropdown from "./ProfileDropdown";
+import useAuthStore from "../stores/authStore";
 
 export default function ProfileButton() {
-  const profilePictureUrl = '';
+  const user = useAuthStore((state) => state.user)
+
+  const avatarUrl = user.user_metadata.avatar_url;
 
   const [activeProfileDropdown, setActiveProfileDropdown] = useState<boolean>(false)
 
@@ -10,8 +13,8 @@ export default function ProfileButton() {
     <div className="relative ml-8 h-11">
       <button 
         onClick={() => {setActiveProfileDropdown(!activeProfileDropdown)}}
-        style={{ backgroundColor: 'white', backgroundImage: profilePictureUrl }}
-        className="w-11 h-11 rounded-full bg-center bg-cover bg-no-repeat outline outline-1 outline-transparent transition-all hover:outline-white/75">
+        style={{ backgroundImage: `url(${avatarUrl})`, backgroundColor: 'white' }}
+        className="profile-button">
       </button>
 
       <ProfileDropdown 

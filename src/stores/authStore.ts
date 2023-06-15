@@ -1,14 +1,15 @@
 import { create } from 'zustand'
+import { User } from '@supabase/supabase-js'
 
 interface AuthState {
-  user: object
+  user: User
   signedIn: boolean,
-  setUserObj: (userObj: object) => void
+  setUserObj: (userObj: User) => void
   setSignedIn: (signedInState: boolean) => void
 }
 
 const useAuthStore = create<AuthState>()((set) => ({
-  user: {},
+  user: {} as User,
   signedIn: false,
   setUserObj: (userObj) => set(({ user: userObj })),
   setSignedIn: (signedInState) => set(({ signedIn: signedInState }))

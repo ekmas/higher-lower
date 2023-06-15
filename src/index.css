@@ -20,3 +20,11 @@ body {
 .button{
   @apply bg-buttonBg font-medium outline outline-1 outline-transparent transition-all rounded-xl hover:bg-buttonHoverBg hover:outline-white/75 text-white
 }
+
+.navbar{
+  @apply w-container px-containerDesktop max-w-full h-[98px] mx-auto flex items-center text-white
+}
+
+.profile-button{
+  @apply w-11 h-11 rounded-full bg-center bg-cover bg-no-repeat outline outline-1 outline-transparent transition-all hover:outline-white/75
+}
