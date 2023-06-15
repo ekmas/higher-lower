@@ -1,10 +1,11 @@
 import { Link, useNavigate } from "react-router-dom"
 import Button from "./Button"
 import ProfileButton from "./ProfileButton"
+import useAuthStore from "../stores/authStore"
 
 export default function Navbar() {
   const navigate = useNavigate()
-  const signedIn = true
+  const signedIn = useAuthStore((state) => state.signedIn)
 
   return (
     <nav>
