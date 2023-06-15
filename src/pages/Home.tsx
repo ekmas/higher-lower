@@ -11,7 +11,7 @@ export default function Home() {
       <Navbar />
       <main className="min-h-[calc(100vh-98px-72px)] w-container px-containerDesktop mx-auto flex text-center items-center justify-center py-[70px]">
         <div>
-          <h1 className="text-white font-bold text-[40px]">Guess which github repository has a higher or lower amount of stars!</h1>
+          <h1 className="text-white font-bold w-[80%] mx-auto text-[40px]">Guess which github repository has a higher or lower amount of stars!</h1>
 
           <Button 
             onClick={() => {navigate('/app')}}
