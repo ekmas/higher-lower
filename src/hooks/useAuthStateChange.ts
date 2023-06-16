@@ -16,10 +16,11 @@ const useAuthStateChange = () => {
     const id = user.id
     const username = user.user_metadata.user_name || user.user_metadata.full_name
 
+    setUsername(username)
+
     const { data } = await supabase.from("users").select().eq("id", id)
 
     if (data?.length === 0) {
-      setUsername(username)
       setHighScore(0)
 
       const { error } = await supabase
@@ -31,7 +32,6 @@ const useAuthStateChange = () => {
       }
     }
     
-    setUsername(data?.at(0).username)
     setHighScore(data?.at(0).high_score)
   }
 
