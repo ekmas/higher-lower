@@ -1,35 +1,23 @@
-import { supabase } from "../supabase"
-import { useNavigate } from "react-router-dom"
+import { AiFillGithub, AiOutlineGoogle } from "react-icons/ai"
+import SignInButton from "./SignInButton"
 
 export default function SignInMain() {
-  const navigate = useNavigate()
-
-  async function signInWithGoogle() {
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: "google",
-    })
-
-    if (error) navigate(0)
-  }
-
-  async function signInWithGithub() {
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: "github",
-    })
-
-    if (error) navigate(0)
-  }
-
   return (
-    <div className="min-h-[calc(100vh-98px-72px)] w-container px-containerDesktop mx-auto flex flex-col text-center items-center justify-center pt-[70px] pb-[130px]">
+    <div className="main flex-col">
       <h1 className="text-white font-bold w-[80%] mb-16 mx-auto text-[40px]">
         Sign in
       </h1>
 
-      <div className="text-white flex flex-col">
-        <button className="button px-16 py-4" onClick={signInWithGoogle}>Sign in with google</button>
-        <div className="my-2.5"></div>
-        <button className="button px-16 py-4" onClick={signInWithGithub}>Sign in with github</button>
+      <div className="text-white flex flex-col pb-[80px]">
+        <SignInButton 
+          provider={"google"}
+          icon={<AiOutlineGoogle className="w-6 h-6 ml-3" />}
+        />
+
+        <SignInButton 
+          provider={"github"}
+          icon={<AiFillGithub className="w-6 h-6 ml-3" />}
+        />
       </div>
     </div>
   )

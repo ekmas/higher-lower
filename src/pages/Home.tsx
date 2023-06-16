@@ -9,12 +9,14 @@ export default function Home() {
   return (
     <div className="w-full min-h-screen radial-gradient-bg ">
       <Navbar />
-      <main className="min-h-[calc(100vh-98px-72px)] w-container px-containerDesktop mx-auto flex text-center items-center justify-center py-[70px]">
+      <main className="main">
         <div>
-          <h1 className="text-white font-bold w-[80%] mx-auto text-[40px]">Guess which github repository has a higher or lower amount of stars!</h1>
+          <h1 className="text-white font-bold w-[80%] mx-auto text-[40px]">
+            Guess which github repository has a higher or lower amount of stars!
+          </h1>
 
-          <Button 
-            onClick={() => {navigate('/app')}}
+          <Button
+            onClick={() => navigate("/app")}
             text="Play"
             classNames="button px-10 py-3.5 text-[22px] mt-6"
           />
