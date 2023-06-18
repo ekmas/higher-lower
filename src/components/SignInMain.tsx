@@ -27,11 +27,13 @@ export default function SignInMain() {
         <IconButton 
           onClick={() => signIn("google")}
           icon={<AiOutlineGoogle className="w-6 h-6 ml-3" />}
+          text="Sign in with"
         />
 
         <IconButton 
           onClick={() => signIn("github")}
           icon={<AiFillGithub className="w-6 h-6 ml-3" />}
+          text="Sign in with"
         />
       </div>
     </div>
