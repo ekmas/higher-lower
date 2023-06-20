@@ -53,7 +53,7 @@ export default function Card({ name, avatar_url, stargazers_count, showButtonsPr
             {showButtonsProp ?
               <CountUp
                 isCounting={true}
-                duration={1} 
+                duration={0.5} 
                 start={stargazers_count - 1000}
                 end={stargazers_count} 
               />
