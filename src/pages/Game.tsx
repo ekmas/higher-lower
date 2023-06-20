@@ -3,6 +3,9 @@ import repos from "../repos.json"
 import Card from "../components/Card"
 import { useNavigate } from "react-router-dom"
 import VSComponent from "../components/VSComponent"
+import useScoreStore from "../stores/scoreStore"
+import Score from "../components/Score"
+import { supabase } from "../supabase"
 
 type Repository = {
   id?: number
@@ -23,6 +26,12 @@ export default function Game() {
   const [isGridMoved, setIsGridMoved] = useState<boolean>(false)
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null)
   const [showVS, setShowVS] = useState<boolean>(true)
+
+  const updateScore = useScoreStore((state) => state.updateScore)
+  const updateHighScore = useScoreStore((state) => state.updateHighScore)
+
+  const score = useScoreStore((state) => state.score)
+  const highScore = useScoreStore((state) => state.highScore)
 
   useEffect(() => {
     if (cards.length < 3) {
@@ -45,12 +54,29 @@ export default function Game() {
     }
   }
 
+  const handleScore = () => {
+    updateScore(score + 1);
+  
+    if (score === highScore) {
+      updateHighScore(score + 1);
+    }
+  }
+
+  const updateUsersTable = async () => {
+    await supabase
+      .from('users')
+      .update({ high_score: highScore })
+      .eq('id', (await supabase.auth.getSession()).data.session?.user.id);
+  }
+
   const handleCardButton = (correct: boolean) => {
     if (correct) {
       setIsCorrect(true)
+      handleScore()
+
       setTimeout(() => {
         setShowVS(false)
-      }, 1000)
+      }, 1500)
 
       setTimeout(() => {
         setIsGridMoved(true)
@@ -64,7 +90,10 @@ export default function Game() {
       }, 2300)
     } else {
       setIsCorrect(false)
+      updateUsersTable()
+
       setTimeout(() => {
+        updateScore(0)
         navigate("/try-again")
       }, 1800)
     }
@@ -97,6 +126,7 @@ export default function Game() {
         active={showVS}
         correct={isCorrect}
       />
+      <Score />
     </>
   )
 }
