@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import repos from "../repos.json"
 import Card from "../components/Card"
 import { useNavigate } from "react-router-dom"
+import VSComponent from "../components/VSComponent"
 
 type Repository = {
   id?: number
@@ -20,6 +21,8 @@ export default function Game() {
   const [pastRepos, setPastRepos] = useState<Repository[]>([])
 
   const [isGridMoved, setIsGridMoved] = useState<boolean>(false)
+  const [isCorrect, setIsCorrect] = useState<boolean | null>(null)
+  const [showVS, setShowVS] = useState<boolean>(true)
 
   useEffect(() => {
     if (cards.length < 3) {
@@ -44,42 +47,56 @@ export default function Game() {
 
   const handleCardButton = (correct: boolean) => {
     if (correct) {
+      setIsCorrect(true)
+      setTimeout(() => {
+        setShowVS(false)
+      }, 1000)
+
       setTimeout(() => {
         setIsGridMoved(true)
-      }, 1300)
+        setIsCorrect(null)
+      }, 1800)
 
       setTimeout(() => {
         setCards((prevArray) => [...prevArray.slice(1)])
         setIsGridMoved(false)
-      }, 3000)
+        setShowVS(true)
+      }, 2300)
     } else {
+      setIsCorrect(false)
       setTimeout(() => {
         navigate("/try-again")
-      }, 1300)
+      }, 1800)
     }
   }
 
   return (
-    <div
-      style={{
-        transform: `translateX(${isGridMoved ? "-33.3%" : "0"})`,
-        transition: isGridMoved ? "all 0.5s" : "none",
-      }}
-      className="w-[150%] overflow-hidden text-white grid grid-cols-3 h-screen radial-gradient-bg"
-    >
-      {cards.map((card: Repository) => {
-        return (
-          <Card
-            key={card.id}
-            name={card.name}
-            avatar_url={card.avatar_url}
-            stargazers_count={card.stargazers_count}
-            showButtonsProp={cards.indexOf(card) !== 0}
-            prevRepo={cards[cards.indexOf(card) - 1]}
-            handleCardButton={handleCardButton}
-          />
-        )
-      })}
-    </div>
+    <>
+      <div
+        style={{
+          transform: `translateX(${isGridMoved ? "-33.3%" : "0"})`,
+          transition: isGridMoved ? "all 0.5s" : "none",
+        }}
+        className="w-[150%] overflow-hidden text-white grid grid-cols-3 h-screen radial-gradient-bg"
+      >
+        {cards.map((card: Repository) => {
+          return (
+            <Card
+              key={card.id}
+              name={card.name}
+              avatar_url={card.avatar_url}
+              stargazers_count={card.stargazers_count}
+              showButtonsProp={cards.indexOf(card) !== 0}
+              prevRepo={cards[cards.indexOf(card) - 1]}
+              handleCardButton={handleCardButton}
+            />
+          )
+        })}
+      </div>
+      <VSComponent 
+        active={showVS}
+        correct={isCorrect}
+      />
+    </>
   )
 }
