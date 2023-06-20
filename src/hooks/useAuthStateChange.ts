@@ -3,6 +3,7 @@ import { supabase } from "../supabase"
 import { useNavigate } from "react-router-dom"
 import { User } from "@supabase/supabase-js"
 import useUserStore from "../stores/userStore"
+import useScoreStore from "../stores/scoreStore"
 
 const useAuthStateChange = () => {
   const navigate = useNavigate()
@@ -10,7 +11,7 @@ const useAuthStateChange = () => {
   const setSignedIn = useUserStore((state) => state.setSignedIn)
   const setProfilePicture = useUserStore((state) => state.setProfilePicture)
   const setUsername = useUserStore((state) => state.setUsername)
-  const setHighScore = useUserStore((state) => state.setHighScore)
+  const setHighScore = useScoreStore((state) => state.updateHighScore)
 
   const doesUserExists = async (user: User) => {
     const id = user.id
