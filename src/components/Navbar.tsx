@@ -5,7 +5,7 @@ import useUserStore from "../stores/userStore"
 
 export default function Navbar() {
   const navigate = useNavigate()
-  const signedIn = useUserStore((state) => state.signedIn)
+  const { signedIn } = useUserStore()
 
   return (
     <nav>

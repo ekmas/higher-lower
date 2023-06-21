@@ -7,7 +7,7 @@ import useUserStore from '../stores/userStore'
 export default function ProfileDropdown({ active }: { active: boolean } ) {
   const navigate = useNavigate()
 
-  const username = useUserStore((state) => state.username)
+  const { username } = useUserStore()
 
   const signOut = async () => {
     await supabase.auth.signOut()

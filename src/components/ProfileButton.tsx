@@ -3,7 +3,7 @@ import ProfileDropdown from "./ProfileDropdown";
 import useAuthStore from "../stores/userStore";
 
 export default function ProfileButton() {
-  const profilePicture = useAuthStore((state) => state.profilePicture)
+  const { profilePicture } = useAuthStore()
 
   const [activeProfileDropdown, setActiveProfileDropdown] = useState<boolean>(false)
 

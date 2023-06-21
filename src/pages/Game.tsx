@@ -28,12 +28,7 @@ export default function Game() {
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null)
   const [showVS, setShowVS] = useState<boolean>(true)
 
-  const updateScore = useScoreStore((state) => state.updateScore)
-  const updateHighScore = useScoreStore((state) => state.updateHighScore)
-
-  const score = useScoreStore((state) => state.score)
-  const highScore = useScoreStore((state) => state.highScore)
-
+  const { score, highScore, updateScore, updateHighScore } = useScoreStore()
   const { signedIn } = useUserStore()
 
   useEffect(() => {

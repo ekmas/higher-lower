@@ -8,10 +8,8 @@ import useScoreStore from "../stores/scoreStore"
 const useAuthStateChange = () => {
   const navigate = useNavigate()
 
-  const setSignedIn = useUserStore((state) => state.setSignedIn)
-  const setProfilePicture = useUserStore((state) => state.setProfilePicture)
-  const setUsername = useUserStore((state) => state.setUsername)
-  const setHighScore = useScoreStore((state) => state.updateHighScore)
+  const { setSignedIn, setProfilePicture, setUsername } = useUserStore()
+  const { updateHighScore } = useScoreStore()
 
   const doesUserExists = async (user: User) => {
     const id = user.id
@@ -22,7 +20,7 @@ const useAuthStateChange = () => {
     const { data } = await supabase.from("users").select().eq("id", id)
 
     if (data?.length === 0) {
-      setHighScore(0)
+      updateHighScore(0)
 
       const { error } = await supabase
         .from("users")
@@ -33,7 +31,7 @@ const useAuthStateChange = () => {
       }
     }
     
-    setHighScore(data?.at(0).high_score)
+    updateHighScore(data?.at(0).high_score)
   }
 
   useEffect(() => {
