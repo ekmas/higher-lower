@@ -21,13 +21,6 @@ export default function VSComponent({ active, correct }: Props) {
           <IoMdCheckmark className="w-8 h-8 fill-[#111111]" />
         </div>
 
-        <div 
-          style={{ top: correct === false ? '0' : '65px'  }}
-          className="vs-component-icon-wrapper"
-        >
-          <IoMdClose className="w-8 h-8 fill-[#111111]" />
-        </div>
-
         <div className="vs-component-hiding-layer"></div>
       </div>
     </div>

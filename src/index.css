@@ -65,3 +65,15 @@ body {
 .game-wrapper{
   @apply w-[150%] overflow-hidden text-white grid grid-cols-3 h-screen radial-gradient-bg
 }
+
+.active-modal{
+  @apply z-20 fixed w-full h-full left-0 top-0 flex bg-transparent items-center duration-[500ms] backdrop-blur-sm justify-center visible
+}
+
+.not-active-modal{
+  @apply invisible fixed w-full h-full left-0 top-0 flex bg-transparent items-center duration-[500ms] justify-center
+}
+
+.modal-main{
+  @apply bg-[#111111] border text-white border-white/75 flex flex-col items-center p-10 rounded-lg mx-5
+}

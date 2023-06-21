@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react"
 import repos from "../repos.json"
 import Card from "../components/Card"
-import { useNavigate } from "react-router-dom"
 import VSComponent from "../components/VSComponent"
 import useScoreStore from "../stores/scoreStore"
 import Score from "../components/Score"
 import { supabase } from "../supabase"
 import useUserStore from "../stores/userStore"
+import TryAgainModal from "../components/TryAgainModal"
 
 type Repository = {
   id?: number
@@ -19,8 +19,6 @@ type Repository = {
 }
 
 export default function Game() {
-  const navigate = useNavigate()
-
   const [cards, setCards] = useState<Repository[]>([])
   const [pastRepos, setPastRepos] = useState<Repository[]>([])
 
@@ -30,6 +28,10 @@ export default function Game() {
 
   const { score, highScore, updateScore, updateHighScore } = useScoreStore()
   const { signedIn } = useUserStore()
+
+  useEffect(() => {
+    updateScore(0)
+  }, [])
 
   useEffect(() => {
     if (cards.length < 3) {
@@ -55,7 +57,7 @@ export default function Game() {
   const handleScore = () => {
     updateScore(score + 1);
   
-    if (score === highScore) {
+    if (signedIn && score === highScore) {
       updateHighScore(score + 1);
     }
   }
@@ -87,13 +89,10 @@ export default function Game() {
         setShowVS(true)
       }, 2300)
     } else {
-      setIsCorrect(false)
-      if (signedIn) updateUsersTable()
-
       setTimeout(() => {
-        updateScore(0)
-        navigate("/try-again")
-      }, 1800)
+        setIsCorrect(false)
+      }, 500)
+      if (signedIn) updateUsersTable()
     }
   }
 
@@ -125,6 +124,9 @@ export default function Game() {
         correct={isCorrect}
       />
       <Score />
+      <TryAgainModal 
+        active={isCorrect === false}
+      />
     </>
   )
 }
