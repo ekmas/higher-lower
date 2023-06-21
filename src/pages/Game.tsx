@@ -6,6 +6,7 @@ import VSComponent from "../components/VSComponent"
 import useScoreStore from "../stores/scoreStore"
 import Score from "../components/Score"
 import { supabase } from "../supabase"
+import useUserStore from "../stores/userStore"
 
 type Repository = {
   id?: number
@@ -32,6 +33,8 @@ export default function Game() {
 
   const score = useScoreStore((state) => state.score)
   const highScore = useScoreStore((state) => state.highScore)
+
+  const { signedIn } = useUserStore()
 
   useEffect(() => {
     if (cards.length < 3) {
@@ -90,7 +93,7 @@ export default function Game() {
       }, 2300)
     } else {
       setIsCorrect(false)
-      updateUsersTable()
+      if (signedIn) updateUsersTable()
 
       setTimeout(() => {
         updateScore(0)
@@ -106,7 +109,7 @@ export default function Game() {
           transform: `translateX(${isGridMoved ? "-33.3%" : "0"})`,
           transition: isGridMoved ? "all 0.5s" : "none",
         }}
-        className="w-[150%] overflow-hidden text-white grid grid-cols-3 h-screen radial-gradient-bg"
+        className="game-wrapper"
       >
         {cards.map((card: Repository) => {
           return (

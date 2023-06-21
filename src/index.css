@@ -41,3 +41,27 @@ body {
 .profile-dropdown-button{
   @apply px-5 py-2 rounded-xl hover:bg-[#333333] w-full text-left flex items-center
 }
+
+.score{
+  @apply absolute w-full left-0 bottom-0 p-10 text-[20px] flex items-center text-white
+}
+
+.vs-component-wrapper{
+  @apply transition w-16 h-16 text-white flex rounded-full items-center justify-center absolute top-[calc(50vh-32px)] left-[calc(50%-32px)]
+}
+
+.vs-component-secondary-wrapper{
+  @apply w-full h-full relative flex items-center justify-center text-[20px]
+}
+
+.vs-component-icon-wrapper{
+  @apply transition-[top] absolute w-full h-full flex items-center rounded-full justify-center bg-white
+}
+
+.vs-component-hiding-layer{
+  @apply top-[65px] absolute w-full h-full flex items-center justify-center bg-[#111111]
+}
+
+.game-wrapper{
+  @apply w-[150%] overflow-hidden text-white grid grid-cols-3 h-screen radial-gradient-bg
+}

@@ -1,12 +1,14 @@
 import useScoreStore from "../stores/scoreStore"
+import useUserStore from "../stores/userStore"
 
 export default function Score() {
+  const { signedIn } = useUserStore()
   const { score, highScore } = useScoreStore()
 
   return (
-    <div className="absolute w-full left-0 bottom-0 p-10 text-[20px] flex items-center justify-between text-white">
+    <div className={signedIn ? "score justify-between" : "score justify-center"}>
       <p>Score: {score}</p>
-      <p>High score: {highScore}</p>
+      {signedIn && <p>High score: {highScore}</p>}
     </div>
   )
 }
