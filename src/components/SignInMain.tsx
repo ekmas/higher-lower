@@ -1,4 +1,4 @@
-import { AiFillGithub, AiOutlineGoogle } from "react-icons/ai"
+import { AiFillGithub } from "react-icons/ai"
 import IconButton from "./IconButton"
 import { Provider } from "@supabase/supabase-js"
 import { supabase } from "../supabase"
@@ -23,13 +23,7 @@ export default function SignInMain() {
         Sign in
       </h1>
 
-      <div className="text-white flex flex-col pb-[80px]">
-        <IconButton 
-          onClick={() => signIn("google")}
-          icon={<AiOutlineGoogle className="w-6 h-6 ml-3" />}
-          text="Sign in with"
-        />
-
+      <div className="text-white flex flex-col pb-[40px]">
         <IconButton 
           onClick={() => signIn("github")}
           icon={<AiFillGithub className="w-6 h-6 ml-3" />}

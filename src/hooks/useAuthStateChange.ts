@@ -13,7 +13,7 @@ const useAuthStateChange = () => {
 
   const doesUserExists = async (user: User) => {
     const id = user.id
-    const username = user.user_metadata.user_name || user.user_metadata.full_name
+    const username = user.user_metadata.user_name
 
     setUsername(username)
 
