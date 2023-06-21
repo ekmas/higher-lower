@@ -42,7 +42,7 @@ export default function Game() {
   const randomNumber = (range: number): number => Math.floor(Math.random() * range) + 1
 
   const addNewRepo = () => {
-    const newRepo = repos[randomNumber(199)]
+    const newRepo = repos[randomNumber(172)]
 
     const repositoryExists = pastRepos.some((repo) => repo.id === newRepo.id)
 

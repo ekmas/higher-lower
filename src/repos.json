@@ -12,12 +12,6 @@
         "stargazers_count": 267223
     },
     {
-        "id": 60493101,
-        "name": "coding-interview-university",
-        "avatar_url": "https://avatars.githubusercontent.com/u/3771963?v=4",
-        "stargazers_count": 259772
-    },
-    {
         "id": 21737465,
         "name": "awesome",
         "avatar_url": "https://avatars.githubusercontent.com/u/170270?v=4",
@@ -78,12 +72,6 @@
         "stargazers_count": 140174
     },
     {
-        "id": 35955666,
-        "name": "the-art-of-command-line",
-        "avatar_url": "https://avatars.githubusercontent.com/u/2058167?v=4",
-        "stargazers_count": 137030
-    },
-    {
         "id": 123458551,
         "name": "Python-100-Days",
         "avatar_url": "https://avatars.githubusercontent.com/u/7474657?v=4",
@@ -108,34 +96,16 @@
         "stargazers_count": 116553
     },
     {
-        "id": 112507086,
-        "name": "30-seconds-of-code",
-        "avatar_url": "https://avatars.githubusercontent.com/u/43479428?v=4",
-        "stargazers_count": 113327
-    },
-    {
         "id": 23096959,
         "name": "go",
         "avatar_url": "https://avatars.githubusercontent.com/u/4314092?v=4",
         "stargazers_count": 112245
     },
     {
-        "id": 88011908,
-        "name": "project-based-learning",
-        "avatar_url": "https://avatars.githubusercontent.com/u/89421154?v=4",
-        "stargazers_count": 106903
-    },
-    {
         "id": 21540759,
         "name": "awesome-go",
         "avatar_url": "https://avatars.githubusercontent.com/u/31996?v=4",
         "stargazers_count": 103415
-    },
-    {
-        "id": 14098069,
-        "name": "free-programming-books-zh_CN",
-        "avatar_url": "https://avatars.githubusercontent.com/u/359395?v=4",
-        "stargazers_count": 102956
     },
     {
         "id": 63537249,
@@ -148,12 +118,6 @@
         "name": "kubernetes",
         "avatar_url": "https://avatars.githubusercontent.com/u/13629408?v=4",
         "stargazers_count": 99245
-    },
-    {
-        "id": 62607227,
-        "name": "tech-interview-handbook",
-        "avatar_url": "https://avatars.githubusercontent.com/u/1315101?v=4",
-        "stargazers_count": 92148
     },
     {
         "id": 133442384,
@@ -180,22 +144,10 @@
         "stargazers_count": 83660
     },
     {
-        "id": 74791366,
-        "name": "clean-code-javascript",
-        "avatar_url": "https://avatars.githubusercontent.com/u/5114666?v=4",
-        "stargazers_count": 83026
-    },
-    {
         "id": 88464704,
         "name": "vue-element-admin",
         "avatar_url": "https://avatars.githubusercontent.com/u/8121621?v=4",
         "stargazers_count": 82793
-    },
-    {
-        "id": 22790488,
-        "name": "java-design-patterns",
-        "avatar_url": "https://avatars.githubusercontent.com/u/582346?v=4",
-        "stargazers_count": 82484
     },
     {
         "id": 51117837,
@@ -214,12 +166,6 @@
         "name": "laravel",
         "avatar_url": "https://avatars.githubusercontent.com/u/958072?v=4",
         "stargazers_count": 73762
-    },
-    {
-        "id": 160640094,
-        "name": "LeetCodeAnimation",
-        "avatar_url": "https://avatars.githubusercontent.com/u/15308811?v=4",
-        "stargazers_count": 73271
     },
     {
         "id": 3470471,
@@ -324,12 +270,6 @@
         "stargazers_count": 63284
     },
     {
-        "id": 206462776,
-        "name": "GitHub-Chinese-Top-Charts",
-        "avatar_url": "https://avatars.githubusercontent.com/u/21018904?v=4",
-        "stargazers_count": 62492
-    },
-    {
         "id": 15634981,
         "name": "godot",
         "avatar_url": "https://avatars.githubusercontent.com/u/6318500?v=4",
@@ -352,12 +292,6 @@
         "name": "fastapi",
         "avatar_url": "https://avatars.githubusercontent.com/u/1326112?v=4",
         "stargazers_count": 59277
-    },
-    {
-        "id": 21872392,
-        "name": "awesome-machine-learning",
-        "avatar_url": "https://avatars.githubusercontent.com/u/246302?v=4",
-        "stargazers_count": 59162
     },
     {
         "id": 26066727,
@@ -394,18 +328,6 @@
         "name": "vite",
         "avatar_url": "https://avatars.githubusercontent.com/u/65625612?v=4",
         "stargazers_count": 57151
-    },
-    {
-        "id": 7600409,
-        "name": "shadowsocks-windows",
-        "avatar_url": "https://avatars.githubusercontent.com/u/3006190?v=4",
-        "stargazers_count": 56653
-    },
-    {
-        "id": 278335273,
-        "name": "github-readme-stats",
-        "avatar_url": "https://avatars.githubusercontent.com/u/35374649?v=4",
-        "stargazers_count": 56313
     },
     {
         "id": 523379232,
@@ -474,22 +396,10 @@
         "stargazers_count": 51963
     },
     {
-        "id": 261787758,
-        "name": "design-resources-for-developers",
-        "avatar_url": "https://avatars.githubusercontent.com/u/5550850?v=4",
-        "stargazers_count": 51954
-    },
-    {
         "id": 32689863,
         "name": "manim",
         "avatar_url": "https://avatars.githubusercontent.com/u/11601040?v=4",
         "stargazers_count": 51841
-    },
-    {
-        "id": 83999700,
-        "name": "Best-websites-a-programmer-should-visit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/13077039?v=4",
-        "stargazers_count": 51566
     },
     {
         "id": 127407957,
@@ -636,12 +546,6 @@
         "stargazers_count": 52154
     },
     {
-        "id": 261787758,
-        "name": "design-resources-for-developers",
-        "avatar_url": "https://avatars.githubusercontent.com/u/5550850?v=4",
-        "stargazers_count": 51956
-    },
-    {
         "id": 214587193,
         "name": "supabase",
         "avatar_url": "https://avatars.githubusercontent.com/u/54469796?v=4",
@@ -660,22 +564,10 @@
         "stargazers_count": 51583
     },
     {
-        "id": 83999700,
-        "name": "Best-websites-a-programmer-should-visit",
-        "avatar_url": "https://avatars.githubusercontent.com/u/13077039?v=4",
-        "stargazers_count": 51567
-    },
-    {
         "id": 127407957,
         "name": "leetcode",
         "avatar_url": "https://avatars.githubusercontent.com/u/12479470?v=4",
         "stargazers_count": 51477
-    },
-    {
-        "id": 138839979,
-        "name": "DeepLearning-500-questions",
-        "avatar_url": "https://avatars.githubusercontent.com/u/31844692?v=4",
-        "stargazers_count": 50807
     },
     {
         "id": 9309093,
@@ -738,22 +630,10 @@
         "stargazers_count": 48572
     },
     {
-        "id": 71220757,
-        "name": "PayloadsAllTheThings",
-        "avatar_url": "https://avatars.githubusercontent.com/u/12152583?v=4",
-        "stargazers_count": 48488
-    },
-    {
         "id": 13233158,
         "name": "obs-studio",
         "avatar_url": "https://avatars.githubusercontent.com/u/7725691?v=4",
         "stargazers_count": 48375
-    },
-    {
-        "id": 24953448,
-        "name": "material-design-icons",
-        "avatar_url": "https://avatars.githubusercontent.com/u/1342004?v=4",
-        "stargazers_count": 48221
     },
     {
         "id": 22067521,
@@ -840,12 +720,6 @@
         "stargazers_count": 45372
     },
     {
-        "id": 40416236,
-        "name": "big-list-of-naughty-strings",
-        "avatar_url": "https://avatars.githubusercontent.com/u/2179708?v=4",
-        "stargazers_count": 44983
-    },
-    {
         "id": 34302698,
         "name": "serverless",
         "avatar_url": "https://avatars.githubusercontent.com/u/13742415?v=4",
@@ -930,12 +804,6 @@
         "stargazers_count": 42860
     },
     {
-        "id": 45986162,
-        "name": "TensorFlow-Examples",
-        "avatar_url": "https://avatars.githubusercontent.com/u/10386605?v=4",
-        "stargazers_count": 42801
-    },
-    {
         "id": 15428480,
         "name": "AdminLTE",
         "avatar_url": "https://avatars.githubusercontent.com/u/39128121?v=4",
@@ -970,12 +838,6 @@
         "name": "jest",
         "avatar_url": "https://avatars.githubusercontent.com/u/103283236?v=4",
         "stargazers_count": 42129
-    },
-    {
-        "id": 5271882,
-        "name": "build-web-application-with-golang",
-        "avatar_url": "https://avatars.githubusercontent.com/u/233907?v=4",
-        "stargazers_count": 42079
     },
     {
         "id": 52281283,
@@ -1020,12 +882,6 @@
         "stargazers_count": 41108
     },
     {
-        "id": 82227585,
-        "name": "design-patterns-for-humans",
-        "avatar_url": "https://avatars.githubusercontent.com/u/4921183?v=4",
-        "stargazers_count": 41087
-    },
-    {
         "id": 92443980,
         "name": "drawio-desktop",
         "avatar_url": "https://avatars.githubusercontent.com/u/1769238?v=4",
@@ -1066,12 +922,6 @@
         "name": "leetcode-master",
         "avatar_url": "https://avatars.githubusercontent.com/u/8636020?v=4",
         "stargazers_count": 39571
-    },
-    {
-        "id": 577116112,
-        "name": "awesome-chatgpt-prompts-zh",
-        "avatar_url": "https://avatars.githubusercontent.com/u/15922823?v=4",
-        "stargazers_count": 39510
     },
     {
         "id": 22458259,
@@ -1116,12 +966,6 @@
         "stargazers_count": 38718
     },
     {
-        "id": 65388917,
-        "name": "PythonDataScienceHandbook",
-        "avatar_url": "https://avatars.githubusercontent.com/u/781659?v=4",
-        "stargazers_count": 38685
-    },
-    {
         "id": 8681349,
         "name": "huginn",
         "avatar_url": "https://avatars.githubusercontent.com/u/23225142?v=4",
@@ -1132,12 +976,6 @@
         "name": "uni-app",
         "avatar_url": "https://avatars.githubusercontent.com/u/5485517?v=4",
         "stargazers_count": 38247
-    },
-    {
-        "id": 128565937,
-        "name": "bypass-paywalls-chrome",
-        "avatar_url": "https://avatars.githubusercontent.com/u/36013816?v=4",
-        "stargazers_count": 38118
     },
     {
         "id": 7569578,
