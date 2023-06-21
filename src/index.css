@@ -23,7 +23,7 @@ body {
 }
 
 .button{
-  @apply bg-buttonBg font-medium outline outline-1 outline-transparent transition-all rounded-xl hover:bg-buttonHoverBg hover:outline-white/75 text-white
+  @apply bg-buttonBg font-medium outline outline-1 outline-transparent transition-all rounded-xl hover:bg-buttonHoverBg text-white
 }
 
 .navbar{
@@ -31,15 +31,15 @@ body {
 }
 
 .profile-button{
-  @apply w-11 h-11 rounded-full bg-center bg-cover bg-no-repeat outline outline-1 outline-transparent transition-all hover:outline-white/75
+  @apply w-11 h-11 rounded-full bg-center bg-cover bg-no-repeat outline outline-2 outline-transparent transition-all hover:outline-white/50
 }
 
 .profile-dropdown-active{
-  @apply absolute top-16 right-0 bg-black border w-max border-white/75 block p-2 rounded-xl
+  @apply absolute top-16 right-0 bg-primaryBlack border-white/50 border-2 w-max block p-2 rounded-xl
 }
 
 .profile-dropdown-button{
-  @apply px-5 py-2 rounded-xl hover:bg-[#333333] w-full text-left flex items-center
+  @apply px-5 py-2 rounded-xl hover:bg-secondaryBlack transition w-full text-left flex items-center
 }
 
 .score{
@@ -59,7 +59,7 @@ body {
 }
 
 .vs-component-hiding-layer{
-  @apply top-[65px] absolute w-full h-full flex items-center justify-center bg-[#111111]
+  @apply top-[65px] absolute w-full h-full flex items-center justify-center bg-primaryBlack
 }
 
 .game-wrapper{
@@ -75,5 +75,5 @@ body {
 }
 
 .modal-main{
-  @apply bg-[#111111] border text-white border-white/75 flex flex-col items-center p-10 rounded-lg mx-5
+  @apply bg-primaryBlack border-2 text-white border-white/50 flex flex-col items-center p-10 rounded-lg mx-5
 }

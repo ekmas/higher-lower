@@ -39,7 +39,7 @@ export default function Card({ name, avatar_url, stargazers_count, showButtonsPr
             />
 
             <IconButton 
-              icon={<AiOutlineCaretDown className="w-6 h-6 ml-3" />}
+              icon={<AiOutlineCaretDown className="w-6 h-6 ml-4" />}
               onClick={() => handleButtonClick(stargazers_count < prevRepo?.stargazers_count)}
               text="Lower"
             />

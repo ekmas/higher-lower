@@ -7,9 +7,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        buttonBg: '#89158d',
-        buttonHoverBg: '#79147c',
-        buttonBorder: ''
+        primaryBlack: '#111',
+        secondaryBlack: '#333',
+        buttonBg: '#741277',
+        buttonHoverBg: '#98199c',
       },
       width: {
         container: '1300px'
