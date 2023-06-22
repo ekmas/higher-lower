@@ -77,3 +77,16 @@ body {
 .modal-main{
   @apply bg-primaryBlack border-2 text-white border-white/50 flex flex-col items-center p-10 rounded-lg mx-5
 }
+
+table, th, td {
+  border-collapse: collapse;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+table {
+  border-collapse: collapse;
+  border-radius: 1em;
+  overflow: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
