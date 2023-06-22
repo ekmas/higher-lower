@@ -18,7 +18,7 @@ export default function SignInMain() {
   }
 
   return (
-    <div className="main flex-col">
+    <div className="main items-center flex-col">
       <h1 className="text-white font-bold w-[80%] mb-8 mx-auto text-[40px]">
         Sign in
       </h1>

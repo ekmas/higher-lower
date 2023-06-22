@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="w-full min-h-screen radial-gradient-bg ">
       <Navbar />
-      <main className="main">
+      <main className="main items-center">
         <div>
           <h1 className="text-white font-bold w-[80%] mx-auto text-[40px]">
             Guess which github repository has a higher or lower amount of stars!

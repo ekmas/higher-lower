@@ -19,7 +19,7 @@ body {
 }
 
 .main{
-  @apply min-h-[calc(100vh-98px-72px)] w-container px-containerDesktop mx-auto flex text-center items-center justify-center
+  @apply min-h-[calc(100vh-98px-72px)] w-container px-containerDesktop mx-auto flex text-center py-[50px] justify-center
 }
 
 .button{
