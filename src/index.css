@@ -104,3 +104,7 @@ table {
 .sign-in-message-main {
   @apply mx-auto h-full text-center bg-primaryBlack border-white/50 px-3 border-2 flex justify-center rounded-xl items-center text-white w-[600px]
 }
+
+.error-page {
+  @apply w-full fixed top-0 left-0 z-20 flex justify-center items-center min-h-screen radial-gradient-bg
+}
