@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import { supabase } from "../supabase";
+import SignInMessage from "./SignInMessage";
+import useUserStore from "../stores/userStore";
 
 type LeaderboardType = {
   uuid: string,
@@ -9,6 +11,8 @@ type LeaderboardType = {
 
 export default function LeaderboardMain() {
   const [leaderboard, setLeaderboard] = useState<LeaderboardType[]>([])
+
+  const { signedIn } = useUserStore()
 
   useEffect(() => {
     const fetchLeaderboard = async () => {
@@ -58,6 +62,8 @@ export default function LeaderboardMain() {
           </table>
         </div>
       </div>
+
+      {!signedIn && <SignInMessage />}
     </main>
   )
 }

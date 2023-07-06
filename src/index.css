@@ -14,71 +14,77 @@ body {
 }
 
 .radial-gradient-bg {
-  background: rgb(17,17,17);
-  background: linear-gradient(0deg, rgba(17,17,17,1) 50%, rgb(34, 2, 56) 100%);
+  background: rgb(17, 17, 17);
+  background: linear-gradient(
+    0deg,
+    rgba(17, 17, 17, 1) 50%,
+    rgb(34, 2, 56) 100%
+  );
 }
 
-.main{
-  @apply min-h-[calc(100vh-98px-72px)] w-container px-containerDesktop mx-auto flex text-center py-[50px] justify-center
+.main {
+  @apply min-h-[calc(100vh-98px-72px)] w-container px-containerDesktop mx-auto flex text-center py-[50px] justify-center;
 }
 
-.button{
-  @apply bg-buttonBg font-medium outline outline-1 outline-transparent transition-all rounded-xl hover:bg-buttonHoverBg text-white
+.button {
+  @apply bg-buttonBg font-medium outline outline-1 outline-transparent transition-all rounded-xl hover:bg-buttonHoverBg text-white;
 }
 
-.navbar{
-  @apply w-container px-containerDesktop max-w-full h-[98px] mx-auto flex items-center text-white
+.navbar {
+  @apply w-container px-containerDesktop max-w-full h-[98px] mx-auto flex items-center text-white;
 }
 
-.profile-button{
-  @apply w-11 h-11 rounded-full bg-center bg-cover bg-no-repeat outline outline-2 outline-transparent transition-all hover:outline-white/50
+.profile-button {
+  @apply w-11 h-11 rounded-full bg-center bg-cover bg-no-repeat outline outline-2 outline-transparent transition-all hover:outline-white/50;
 }
 
-.profile-dropdown-active{
-  @apply absolute top-16 right-0 bg-primaryBlack border-white/50 border-2 w-max block p-2 rounded-xl
+.profile-dropdown-active {
+  @apply absolute top-16 right-0 bg-primaryBlack border-white/50 border-2 w-max block p-2 rounded-xl;
 }
 
-.profile-dropdown-button{
-  @apply px-5 py-2 rounded-xl hover:bg-secondaryBlack transition w-full text-left flex items-center
+.profile-dropdown-button {
+  @apply px-5 py-2 rounded-xl hover:bg-secondaryBlack transition w-full text-left flex items-center justify-center;
 }
 
-.score{
-  @apply absolute w-full left-0 bottom-0 p-10 text-[20px] flex items-center text-white
+.score {
+  @apply absolute w-full left-0 bottom-0 p-10 text-[20px] flex items-center text-white;
 }
 
-.vs-component-wrapper{
-  @apply transition w-16 h-16 text-white flex rounded-full items-center justify-center absolute top-[calc(50vh-32px)] left-[calc(50%-32px)]
+.vs-component-wrapper {
+  @apply transition w-16 h-16 text-white flex rounded-full items-center justify-center absolute top-[calc(50vh-32px)] left-[calc(50%-32px)];
 }
 
-.vs-component-secondary-wrapper{
-  @apply w-full h-full relative flex items-center justify-center text-[20px]
+.vs-component-secondary-wrapper {
+  @apply w-full h-full relative flex items-center justify-center text-[20px];
 }
 
-.vs-component-icon-wrapper{
-  @apply transition-[top] absolute w-full h-full flex items-center rounded-full justify-center bg-white
+.vs-component-icon-wrapper {
+  @apply transition-[top] absolute w-full h-full flex items-center rounded-full justify-center bg-white;
 }
 
-.vs-component-hiding-layer{
-  @apply top-[65px] absolute w-full h-full flex items-center justify-center bg-primaryBlack
+.vs-component-hiding-layer {
+  @apply top-[65px] absolute w-full h-full flex items-center justify-center bg-primaryBlack;
 }
 
-.game-wrapper{
-  @apply w-[150%] overflow-hidden text-white grid grid-cols-3 h-screen radial-gradient-bg
+.game-wrapper {
+  @apply w-[150%] overflow-hidden text-white grid grid-cols-3 h-screen radial-gradient-bg;
 }
 
-.active-modal{
-  @apply z-20 fixed w-full h-full left-0 top-0 flex bg-transparent items-center duration-[500ms] backdrop-blur-sm justify-center visible
+.active-modal {
+  @apply z-20 fixed w-full h-full left-0 top-0 flex bg-transparent items-center duration-[500ms] backdrop-blur-sm justify-center visible;
 }
 
-.not-active-modal{
-  @apply invisible fixed w-full h-full left-0 top-0 flex bg-transparent items-center duration-[500ms] justify-center
+.not-active-modal {
+  @apply invisible fixed w-full h-full left-0 top-0 flex bg-transparent items-center duration-[500ms] justify-center;
 }
 
-.modal-main{
-  @apply bg-primaryBlack border-2 text-white border-white/50 flex flex-col items-center p-10 rounded-lg mx-5
+.modal-main {
+  @apply bg-primaryBlack border-2 text-white border-white/50 flex flex-col items-center p-10 rounded-lg mx-5;
 }
 
-table, th, td {
+table,
+th,
+td {
   border-collapse: collapse;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -89,4 +95,12 @@ table {
   border-radius: 1em;
   overflow: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.sign-in-message-wrapper {
+  @apply w-full fixed left-0 bottom-0 z-10 my-[25px] h-[70px];
+}
+
+.sign-in-message-main {
+  @apply mx-auto h-full text-center bg-primaryBlack border-white/50 px-3 border-2 flex justify-center rounded-xl items-center text-white w-[600px]
 }
