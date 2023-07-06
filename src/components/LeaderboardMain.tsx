@@ -22,6 +22,8 @@ export default function LeaderboardMain() {
         .gt('high_score', 0)
         .order('high_score', { ascending: false });
 
+        // we are selecting only highScores greater than 0
+
       if (error) {
         console.error(error);
       } else {
