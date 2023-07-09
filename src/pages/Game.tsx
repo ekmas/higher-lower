@@ -7,16 +7,17 @@ import Score from "../components/Score"
 import { supabase } from "../supabase"
 import useUserStore from "../stores/userStore"
 import TryAgainModal from "../components/TryAgainModal"
+import { Repository } from "../types"
 
-type Repository = {
-  id?: number
-  name: string
-  avatar_url: string
-  stargazers_count: number
-  showButtonsProp?: boolean
-  prevRepo?: Repository
-  handleCardButton?: any
-}
+// type Repository = {
+//   id?: number
+//   name: string
+//   avatar_url: string
+//   stargazers_count: number
+//   showButtonsProp?: boolean
+//   prevRepo?: Repository
+//   handleCardButton?: any
+// }
 
 export default function Game() {
   const [cards, setCards] = useState<Repository[]>([])

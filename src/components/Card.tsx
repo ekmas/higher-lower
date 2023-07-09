@@ -2,16 +2,7 @@ import { useState } from "react"
 import IconButton from "./IconButton"
 import { AiOutlineCaretDown, AiOutlineCaretUp } from 'react-icons/ai'
 import { CountUp } from "use-count-up"
-
-type Repository = {
-  id?: number,
-  name: string
-  avatar_url: string
-  stargazers_count: number,
-  showButtonsProp?: boolean,
-  prevRepo?: any,
-  handleCardButton?: any
-}
+import { Repository } from "../types"
 
 export default function Card({ name, avatar_url, stargazers_count, showButtonsProp, prevRepo, handleCardButton }: Repository) {
   const [showButtons, setShowButtons] = useState(showButtonsProp)
