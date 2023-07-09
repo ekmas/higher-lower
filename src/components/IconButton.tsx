@@ -1,12 +1,13 @@
 type ButtonProps = {
   onClick: any
   icon: JSX.Element,
-  text: string
+  text: string,
+  classNames: string
 }
 
-export default function IconButton({ onClick, icon, text }: ButtonProps) {
+export default function IconButton({ onClick, icon, text, classNames }: ButtonProps) {
   return (
-    <button onClick={onClick} className="button flex items-center px-14 py-3.5 my-2">
+    <button onClick={onClick} className={classNames}>
       {text}
       {icon}
     </button>

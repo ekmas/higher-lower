@@ -22,34 +22,36 @@ export default function Card({ name, avatar_url, stargazers_count, showButtonsPr
   }
   
   return (
-    <div className="flex flex-col justify-center items-center text-center">
-      <img width={100} src={avatar_url} alt={name} />
+    <div className="card-wrapper">
+      <img className="img-repo" src={avatar_url} alt={name} />
 
-      <h1 className="text-[35px] font-bold mt-6">{name}</h1>
+      <h1 className="repo-name-heading">{name}</h1>
 
-      <p className="my-2">has</p>
+      <p className="has-word">has</p>
 
       {showButtons ?
         <div>
           <div className="flex flex-col w-min mx-auto">
             <IconButton 
-              icon={<AiOutlineCaretUp className="w-6 h-6 ml-3" />}
+              icon={<AiOutlineCaretUp className="w-6 h-6 ml-3 m700:w-4 m700:h-4" />}
               onClick={() => handleButtonClick((stargazers_count > prevRepo?.stargazers_count))}
               text="Higher"
+              classNames="card-button m700:mb-2"
             />
 
             <IconButton 
-              icon={<AiOutlineCaretDown className="w-6 h-6 ml-4" />}
+              icon={<AiOutlineCaretDown className="w-6 h-6 ml-4 m700:w-4 m700:h-4" />}
               onClick={() => handleButtonClick(stargazers_count < prevRepo?.stargazers_count)}
               text="Lower"
+              classNames="card-button m700:mb-1"
             />
           </div>
 
-          <p className="mt-2">stars than {prevRepo?.name}</p>
+          <p className="stars-than">stars than {prevRepo?.name}</p>
         </div>
         :
         <div>
-          <h2 className="text-[30px] font-bold">
+          <h2 className="stars-count">
             {showButtonsProp ?
               <CountUp
                 isCounting={true}
@@ -62,7 +64,7 @@ export default function Card({ name, avatar_url, stargazers_count, showButtonsPr
             }
           </h2>
       
-          <p className="my-2">stars on github</p>
+          <p className="stars-on-github">stars on github</p>
         </div>
       }
     </div>

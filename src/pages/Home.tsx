@@ -5,20 +5,20 @@ import { useNavigate } from "react-router-dom"
 
 export default function Home() {
   const navigate = useNavigate()
-
+  
   return (
     <div className="w-full min-h-screen radial-gradient-bg ">
       <Navbar />
       <main className="main items-center">
         <div>
-          <h1 className="text-white font-bold w-[80%] mx-auto text-[40px]">
+          <h1 className="home-heading">
             Guess which github repository has a higher or lower amount of stars!
           </h1>
 
           <Button
             onClick={() => navigate("/app")}
             text="Play"
-            classNames="button px-10 py-3.5 text-[22px] mt-6"
+            classNames="home-cta-button"
           />
         </div>
       </main>

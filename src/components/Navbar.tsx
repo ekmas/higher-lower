@@ -11,17 +11,18 @@ export default function Navbar() {
     <nav>
       <div className="navbar justify-between">
         <Link to={"/"}>
-          <h1 className="font-bold text-2xl hover:text-white/80">Higher Lower</h1>
+          <h1 className="font-bold hidden desktop:block text-2xl hover:text-white/80">Higher Lower</h1>
+          <h1 className="font-bold hidden mobile:block text-2xl hover:text-white/80">HL</h1>
         </Link>
 
         <div className="flex items-center">
-          <Link className="hover:text-white/80" to={"/leaderboard"}>Leaderboard</Link>
+          <Link className="hover:text-white/80 m600:text-[13px]" to={"/leaderboard"}>Leaderboard</Link>
 
           {signedIn ?
             <ProfileButton />
             :
             <Button 
-              classNames={"px-5 py-3 ml-8 button"}
+              classNames={"navbar-sign-in-button"}
               onClick={() => {navigate('/sign-in')}}
               text={"Sign In"}
             />

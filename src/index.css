@@ -10,7 +10,7 @@
 
 body {
   font-family: "Space Grotesk", sans-serif;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .radial-gradient-bg {
@@ -22,64 +22,58 @@ body {
   );
 }
 
-.main {
-  @apply min-h-[calc(100vh-98px-72px)] w-container px-containerDesktop mx-auto flex text-center py-[50px] justify-center;
+/* --------------------  Components A-Z  -------------------- */
+
+/* Card */
+
+.card-wrapper {
+  @apply flex flex-col justify-center items-center text-center
 }
 
-.button {
-  @apply bg-buttonBg font-medium outline outline-1 outline-transparent transition-all rounded-xl hover:bg-buttonHoverBg text-white;
+.img-repo {
+  @apply w-[100px] m1000:w-16 portrait-lg:w-16 m700:w-8
 }
 
-.navbar {
-  @apply w-container px-containerDesktop max-w-full h-[98px] mx-auto flex items-center text-white;
+.repo-name-heading {
+  @apply text-[35px] font-bold mt-6 m1200:text-[28px] m1000:text-[20px] portrait-lg:text-[20px] m700:text-[17px] 
+  m700:mt-3 m550:text-[14px] m550:mt-1
 }
 
-.profile-button {
-  @apply w-11 h-11 rounded-full bg-center bg-cover bg-no-repeat outline outline-2 outline-transparent transition-all hover:outline-white/50;
+.has-word {
+  @apply my-2 portrait-lg:my-2 m700:text-sm m550:text-[12px] m550:my-1
 }
 
-.profile-dropdown-active {
-  @apply absolute top-16 right-0 bg-primaryBlack border-white/50 border-2 w-max block p-2 rounded-xl;
+.card-button {
+  @apply icon-button m1000:px-9 m1000:text-sm m1000:py-2.5 portrait-lg:px-9 portrait-lg:text-sm portrait-lg:py-2.5 
+  m700:py-1.5 m700:text-[12px] m700:mt-0 m550:text-[11px] m550:py-1
 }
 
-.profile-dropdown-button {
-  @apply px-5 py-2 rounded-xl hover:bg-secondaryBlack transition w-full text-left flex items-center justify-center;
+.stars-count {
+  @apply text-[30px] m1000:text-xl portrait-lg:text-xl m700:text-base tracking-wider font-bold m550:text-[14px]
 }
 
-.score {
-  @apply absolute w-full left-0 bottom-0 p-10 text-[20px] flex items-center text-white;
+.stars-than {
+  @apply mt-2 portrait-lg:my-2 m700:text-sm m550:text-[12px] m550:my-1
 }
 
-.vs-component-wrapper {
-  @apply transition w-16 h-16 text-white flex rounded-full items-center justify-center absolute top-[calc(50vh-32px)] left-[calc(50%-32px)];
+.stars-on-github {
+  @apply my-2 portrait-lg:my-2 m700:text-sm m550:text-[12px] m550:my-1
 }
 
-.vs-component-secondary-wrapper {
-  @apply w-full h-full relative flex items-center justify-center text-[20px];
+/* IconButton */
+
+.icon-button {
+  @apply button flex items-center px-14 py-3.5 my-2
 }
 
-.vs-component-icon-wrapper {
-  @apply transition-[top] absolute w-full h-full flex items-center rounded-full justify-center bg-white;
+/* LeaderboardMain */
+
+.leaderboard-heading {
+  @apply text-white font-bold mx-auto text-[40px] m1000:text-[30px] m600:w-full m600:text-[25px]
 }
 
-.vs-component-hiding-layer {
-  @apply top-[65px] absolute w-full h-full flex items-center justify-center bg-primaryBlack;
-}
-
-.game-wrapper {
-  @apply w-[150%] overflow-hidden text-white grid grid-cols-3 h-screen radial-gradient-bg;
-}
-
-.active-modal {
-  @apply z-20 fixed w-full h-full left-0 top-0 flex bg-transparent items-center duration-[500ms] backdrop-blur-sm justify-center visible;
-}
-
-.not-active-modal {
-  @apply invisible fixed w-full h-full left-0 top-0 flex bg-transparent items-center duration-[500ms] justify-center;
-}
-
-.modal-main {
-  @apply bg-primaryBlack border-2 text-white border-white/50 flex flex-col items-center p-10 rounded-lg mx-5;
+.username-table-cell {
+  @apply max-w-[300px] m450:max-w-[150px] py-2 px-4 text-left overflow-hidden overflow-ellipsis whitespace-nowrap
 }
 
 table,
@@ -97,14 +91,165 @@ table {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+/* Navbar */
+
+.navbar {
+  @apply w-container px-containerDesktop m700:px-containerMobile max-w-full h-[98px] mx-auto flex items-center
+  text-white;
+}
+
+.navbar-sign-in-button {
+  @apply px-5 py-3 ml-8 button m600:text-[13px] m600:py-2 m600:px-3.5 m600:ml-6
+}
+
+/* ProfileButton */
+
+.profile-button {
+  @apply w-11 h-11 rounded-full bg-center bg-cover bg-no-repeat outline outline-2 outline-transparent transition-all 
+  hover:outline-white/50;
+}
+
+/* ProfileDropdown */
+
+.profile-dropdown-active {
+  @apply absolute top-16 right-0 bg-primaryBlack border-white/50 border-2 w-max block p-2 rounded-xl;
+}
+
+.profile-dropdown-username {
+  @apply font-medium text-center m600:text-[13px] max-w-[200px] m400:max-w-[140px] overflow-hidden overflow-ellipsis 
+  whitespace-nowrap
+}
+
+/* ProfileDropdownButton */
+
+.profile-dropdown-button {
+  @apply px-5 py-2 rounded-xl hover:bg-secondaryBlack transition w-full text-left flex items-center justify-center 
+  m600:text-[13px];
+}
+
+/* Score */
+
+.score {
+  @apply absolute w-full left-0 bottom-0 p-10 text-[20px] flex items-center text-white portrait-main:text-[12px] 
+  portrait-main:p-5 portrait-smallest:text-[10px] portrait-smallest:p-3;
+}
+
+/* SignInMain */
+
+.sign-in-heading {
+  @apply text-white font-bold w-[80%] mb-8 mx-auto text-[40px] m1000:text-[30px] m1000:mb-4
+}
+
+/* SignInMessage */
+
 .sign-in-message-wrapper {
-  @apply w-full fixed left-0 bottom-0 z-10 my-[25px] h-[70px];
+  @apply w-full fixed left-0 bottom-0 z-10 my-[25px] h-[70px] px-5;
 }
 
 .sign-in-message-main {
-  @apply mx-auto h-full text-center bg-primaryBlack border-white/50 px-3 border-2 flex justify-center rounded-xl items-center text-white w-[600px]
+  @apply mx-auto h-full text-center bg-primaryBlack border-white/50 px-6 border-2 flex justify-center rounded-xl 
+  items-center text-white w-[600px] m650:w-max m650:max-w-full m600:text-[13px]
 }
 
+/* TryAgainModal */
+
+.active-modal {
+  @apply z-20 fixed w-full h-full left-0 top-0 flex bg-transparent items-center duration-[500ms] backdrop-blur-sm 
+  justify-center visible;
+}
+
+.not-active-modal {
+  @apply invisible fixed w-full h-full left-0 top-0 flex bg-transparent items-center duration-[500ms] justify-center;
+}
+
+/* VSComponent */
+
+.vs-component-wrapper {
+  @apply transition w-16 h-16 text-white flex rounded-full items-center justify-center absolute top-[calc(50vh-32px)] 
+  left-[calc(50%-32px)] m1000:w-10 m1000:h-10 m1000:top-[calc(50vh-20px)] m1000:left-[calc(50%-20px)] m700:top-[calc(50vh-10px)] 
+  m700:left-[calc(50%-10px)] m700:w-5 m700:h-5 portrait-smaller:w-10 portrait-smaller:h-10 portrait-smaller:top-[calc(50vh-20px)] 
+  portrait-smaller:left-[calc(50%-20px)];
+}
+
+.vs-component-secondary-wrapper {
+  @apply w-full h-full relative flex items-center justify-center text-[20px] m1000:text-base portrait-smaller:text-base 
+  m700:text-[12px];
+}
+
+.vs-component-icon-wrapper {
+  @apply transition-[top] absolute w-full h-full flex items-center rounded-full justify-center bg-white;
+}
+
+.vs-component-hiding-layer {
+  @apply top-[65px] m1000:top-[41px] portrait-smaller:top-[41px] m700:top-[21px] absolute w-full h-full flex items-center 
+  justify-center bg-primaryBlack;
+}
+
+.vs-component-icon-wrapper-hidden {
+  @apply vs-component-icon-wrapper top-[65px] m1000:top-[41px] m700:top-[21px] portrait-smaller:top-[41px]
+}
+
+.vs-component-checkmark {
+  @apply w-8 h-8 m1000:w-6 m1000:h-6 m700:w-3 m700:h-3 portrait-smaller:w-6 portrait-smaller:h-6 fill-[#111111]
+} 
+
+/* --------------------  Pages A-Z  -------------------- */
+
+/* ErrorPage */
+
 .error-page {
-  @apply w-full fixed top-0 left-0 z-20 flex justify-center items-center min-h-screen radial-gradient-bg
+  @apply w-full fixed top-0 left-0 z-20 flex justify-center items-center min-h-screen radial-gradient-bg text-center
+}
+
+.modal-main {
+  @apply bg-primaryBlack border-2 max-w-[800px] m700:p-7 text-white border-white/50 flex flex-col items-center 
+  p-10 rounded-lg mx-5;
+}
+
+/* Game */
+
+.game-wrapper {
+  @apply landscape:w-[150%] landscape:h-screen mobile-height overflow-hidden text-white grid landscape:grid-cols-3 
+  portrait:grid-rows-3 radial-gradient-bg;
+}
+
+.grid-is-moved {
+  @apply game-wrapper blankbg landscape:-translate-x-1/3 portrait:-translate-y-1/3 transition-all duration-500
+}
+
+.grid-isnt-moved {
+  @apply game-wrapper blankbg translate-x-0 translate-y-0 transition-none
+}
+
+/* Home */
+
+.home-heading {
+  @apply text-white font-bold w-[80%] mx-auto text-[40px] m1000:text-[30px] m600:w-full m600:text-[25px] m400:text-[20px]
+}
+
+.home-cta-button {
+  @apply button px-10 py-3.5 text-[22px] m600:text-lg m600:px-8 m600:py-3 mt-6 m400:mt-4 m400:text-base m400:px-6 m400:py-2.5
+}
+
+/* --------------------  Other classes  -------------------- */
+
+.main {
+  @apply min-h-[calc(100vh-98px-72px)] w-container px-containerDesktop m700:px-containerMobile mx-auto flex text-center 
+  py-[70px] justify-center max-w-full;
+}
+
+.button {
+  @apply bg-buttonBg font-medium outline outline-1 outline-transparent transition-all rounded-xl hover:bg-buttonHoverBg 
+  text-white;
+}
+
+@media screen and (orientation:portrait) {
+  .blankbg {
+    background: #111111 !important;
+  }
+
+  .mobile-height {
+    height: 150vh;
+    height: 150svh;
+  }
 }

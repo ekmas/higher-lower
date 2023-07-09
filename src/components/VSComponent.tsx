@@ -15,10 +15,9 @@ export default function VSComponent({ active, correct }: Props) {
         vs
 
         <div
-          style={{ top: correct ? '0' : '65px'  }}
-          className="vs-component-icon-wrapper"
+          className={correct ? "vs-component-icon-wrapper top-0" : "vs-component-icon-wrapper-hidden"}
         >
-          <IoMdCheckmark className="w-8 h-8 fill-[#111111]" />
+          <IoMdCheckmark className="vs-component-checkmark" />
         </div>
 
         <div className="vs-component-hiding-layer"></div>

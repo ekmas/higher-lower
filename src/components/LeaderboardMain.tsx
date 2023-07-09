@@ -36,18 +36,19 @@ export default function LeaderboardMain() {
 
   return (
     <main className="main">
-      <div>
-        <h1 className="text-white font-bold mx-auto text-[40px]">
+      <div className="w-[600px] mx-5 m500:mx-0">
+        <h1 className="leaderboard-heading">
           Leaderboard
         </h1>
 
-        <div className="w-[600px] mt-[50px] border border-white/30 rounded-xl">
-          <table className="w-full text-white rounded-xl">
+        <div className="w-full mt-[50px] border border-white/30 rounded-xl">
+          <table className="w-full text-white rounded-xl m600:text-sm">
             <thead>
               <tr className="bg-primaryBlack hover:bg-secondaryBlack transition">
-                <td className="w-[50px] py-2">#</td>
+                <td className="w-[50px] m550:w-10 py-2">#</td>
                 <td className="text-left pl-4 py-2">Username</td>
-                <td className="w-[120px] py-2">High score</td>
+                <td className="w-[120px] hidden leaderboardDesktop:table-cell py-2">High score</td>
+                <td className="w-[50px] hidden leaderboardMobile:table-cell py-2">HS</td>
               </tr>
             </thead>
             <tbody>
@@ -55,7 +56,7 @@ export default function LeaderboardMain() {
                 return(
                   <tr className="bg-primaryBlack hover:bg-secondaryBlack transition" key={index}>
                     <td className="py-2">{index + 1}</td>
-                    <td className="py-2 pl-4 text-left">{player.username}</td>
+                    <td className="username-table-cell">{player.username}</td>
                     <td className="py-2">{player.high_score}</td>
                   </tr>
                 )

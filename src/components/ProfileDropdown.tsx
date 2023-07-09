@@ -18,7 +18,7 @@ export default function ProfileDropdown({ active }: { active: boolean } ) {
   return (
     <div className={active ? "profile-dropdown-active" : "hidden"}>
       <div className='px-5 py-2'>
-        <h4 className='font-medium text-center'>{username}</h4>
+        <h4 className='profile-dropdown-username'>{username}</h4>
       </div>
 
       <ProfileDropdownButton 

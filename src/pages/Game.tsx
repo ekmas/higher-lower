@@ -118,11 +118,9 @@ export default function Game() {
   return (
     <>
       <div
-        style={{
-          transform: `translateX(${isGridMoved ? "-33.3%" : "0"})`,
-          transition: isGridMoved ? "all 0.5s" : "none",
-        }}
-        className="game-wrapper"
+        className={
+          isGridMoved ? "grid-is-moved" : "grid-isnt-moved"
+        }
       >
         {cards.map((card: Repository) => {
           return (

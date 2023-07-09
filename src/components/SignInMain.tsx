@@ -19,7 +19,7 @@ export default function SignInMain() {
 
   return (
     <div className="main items-center flex-col">
-      <h1 className="text-white font-bold w-[80%] mb-8 mx-auto text-[40px]">
+      <h1 className="sign-in-heading">
         Sign in
       </h1>
 
@@ -28,6 +28,7 @@ export default function SignInMain() {
           onClick={() => signIn("github")}
           icon={<AiFillGithub className="w-6 h-6 ml-3" />}
           text="Sign in with"
+          classNames="icon-button"
         />
       </div>
     </div>
